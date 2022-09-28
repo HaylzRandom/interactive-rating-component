@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* Colours */
+    --clr-primary: 25, 97%, 53%;
+    --clr-neutral-100: 0, 0%, 100%;
+    --clr-neutral-200: 217, 12%, 63%;
+    --clr-neutral-300: 216, 12%, 54%;
+    --clr-neutral-700: 213, 19%, 18%;
+    --clr-neutral-900: 216, 12%, 8%;
+
+    --clr-bg: 228, 11%, 9%;
+
+    /* Fonts */
+
+    /* Family */
+    --ff-overpass: 'Overpass',
+        sans-serif;
+
+    /* Sizes */
+    --fs-body: 1rem;
+
+    /* Font Weights */
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-overpass);
+    background-color: hsl(var(--clr-bg));
+    color: hsl(var(--clr-neutral-100));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: left;
+    padding: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.panel-container {
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    border-radius: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 25.75em;
+    padding: 2em 1.5em;
+}
+
+.img-container {
+    background-color: hsl(var(--clr-neutral-700));
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.panel-container strong {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.1875rem;
+}
+
+.panel-container p {
+    color: hsl(var(--clr-neutral-200));
+    font-size: var(--fs-body);
+    line-height: 1.5rem;
+    margin-bottom: 1.5em;
+}
+
+.ratings-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em;
+    background-color: hsl(var(--clr-neutral-700));
+    color: hsl(var(--clr-neutral-200));
+    font-size: var(--fs-body);
+    font-weight: var(--fw-700);
+    border-radius: 100%;
+    width: 3.125em;
+    height: 3.125em;
+    line-height: 1.5rem;
+}
+
+.rating:hover,
+.rating:active {
+    background-color: hsl(var(--clr-primary));
+    color: hsl(var(--clr-neutral-100));
+}
+
+.rating.active {
+    background-color: hsl(var(--clr-neutral-200));
+    ;
+    color: hsl(var(--clr-neutral-100));
+}
+
+.btn {
+    background-color: hsl(var(--clr-primary));
+    color: hsl(var(--clr-neutral-100));
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+    padding: 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background-color: hsl(var(--clr-neutral-100));
+    color: hsl(var(--clr-primary));
+}
+
+.submit-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 1em;
+}
+
+.img-thanks {
+    width: 160px;
+    margin-bottom: 2em;
+}
+
+.selection {
+    color: hsl(var(--clr-primary));
+    background-color: hsl(var(--clr-neutral-700));
+    border-radius: 100vw;
+    padding: 0.5em 1em;
+}
+
+.submit-container strong {
+    margin-top: 0.75em;
+}
+
+.submit-container p {
+    margin-top: 0;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(var(--clr-primary));
+}
+
+.attribution a:hover {
+    color: hsl(var(--clr-neutral-100));
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .panel-container {
+        max-width: 20.4375em;
+        padding: 1.5em;
+        font-size: 0.875rem;
+    }
+
+    .panel-container strong {
+        font-size: 1.5rem;
+    }
+
+    .panel-container p {
+        font-size: inherit;
+    }
+
+    .img-container {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .img-container img {
+        width: 0.875em;
+    }
+
+    .rating {
+        width: 2.625em;
+        height: 2.625em;
+
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+}
